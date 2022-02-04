@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="http://smiwddwd3400:44306/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='RFC_ECC_PD2')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZEAM_OBJPG_MAINTORDANDOPER_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZC_ObjPgMaintOrderAndOperationType" sap:label="Maintenance Order and Operation" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MaintenanceOrder"/>
+                    <PropertyRef Name="MaintenanceOrderOperation"/>
+                    <PropertyRef Name="MaintenanceOrderSubOperation"/>
+                </Key>
+                <Property Name="OrderHasLongText_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MaintenanceOrder" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:text="MaintenanceOrderDesc" sap:label="Order"/>
+                <Property Name="TechObjIsEquipOrFuncnlLocDesc" Type="Edm.String" MaxLength="60" sap:label="Technical Object Type Text"/>
+                <Property Name="ScheduledBasicStartTime" Type="Edm.Time" Precision="0" sap:label="Scheduled Start Time"/>
+                <Property Name="ScheduledBasicEndDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Scheduled End Date"/>
+                <Property Name="ScheduledBasicEndTime" Type="Edm.Time" Precision="0" sap:label="Scheduled End Time"/>
+                <Property Name="CreationDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Created On"/>
+                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="CreatedByUserDescription" sap:label="Created By"/>
+                <Property Name="CreatedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Created By User Name" sap:quickinfo="Created By User"/>
+                <Property Name="LastChangeDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Changed On"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="LastChangedByUserName" sap:label="Changed By"/>
+                <Property Name="LastChangedByUserName" Type="Edm.String" MaxLength="80" sap:label="Changed By User Name" sap:quickinfo="Changed By User"/>
+                <Property Name="IsFinallyConfirmed" Type="Edm.Boolean" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Finally Confirmed"/>
+                <Property Name="OperationDescription" Type="Edm.String" MaxLength="40" sap:label="Operation Description"/>
+                <Property Name="IsOverdue" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Checkbox"/>
+                <Property Name="MaintOrderOperationLongText" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase"/>
+                <Property Name="MaintOrdCnctntdActvSystSts" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Order System Status"/>
+                <Property Name="MaintOrdCnctntdActvUserSts" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Order User Status"/>
+                <Property Name="MaintOrderOperationInternalID" Type="Edm.String" MaxLength="22" sap:display-format="UpperCase" sap:label="Object number"/>
+                <Property Name="MaintOrderOperationCounter" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Counter"/>
+                <Property Name="MaintOrderRoutingNumber" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label="Opertn task list no."/>
+                <Property Name="OperationWorkCenterInternalID" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Object ID"/>
+                <Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+                <Property Name="MaintenanceOrderInternalID" Type="Edm.String" MaxLength="22" sap:display-format="UpperCase" sap:label="Object number"/>
+                <Property Name="OperationTechnicalObjectLabel" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Operation Technical Object"/>
+                <Property Name="WorkCenterInternalID" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Work Center"/>
+                <Property Name="WorkCenterTypeCode" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Object Type"/>
+                <Property Name="MaintObjectLocAcctAssgmtNmbr" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Loc/Acct Assignment"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="TechnicalObject" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Equipment"/>
+                <Property Name="FunctionalLocationLabelName" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Functional Location"/>
+                <Property Name="MaintOrderRespPartnerFunction" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Function of order"/>
+                <Property Name="MaintOrderConfirmation" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label="Confirmation"/>
+                <Property Name="MaintOperationTechnicalObject" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Technical Object"/>
+                <Property Name="OperationTechObjIsEquip" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:text="OperationTechObjIsEquipDesc" sap:label="Operation Technical Object Type"/>
+                <Property Name="OperationTechObjIsEquipDesc" Type="Edm.String" MaxLength="60" sap:label="Operation Technical Object Type Text"/>
+                <Property Name="OperationMaintenanceNotif" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="OperationMaintNotificationText" sap:label="Operation Notification"/>
+                <Property Name="OperationMaintNotificationText" Type="Edm.String" MaxLength="40" sap:label="Operation Notification Text"/>
+                <Property Name="OperationControlKey" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Operation Control Key"/>
+                <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:text="WorkCenterText" sap:label="Operation Work Center"/>
+                <Property Name="WorkCenterText" Type="Edm.String" MaxLength="40" sap:label="Operation Work Center Text"/>
+                <Property Name="MaintenanceOrderOperation" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="OperationDescription" sap:label="Operation"/>
+                <Property Name="OperationHasLongText" Type="Edm.Boolean" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Operation Has Long Text" sap:quickinfo="Operation Long Text"/>
+                <Property Name="OperationPurgInfoRecdSearchTxt" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Sort Term"/>
+                <Property Name="PlannedPlant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="PlantName" sap:label="Operation Work Center Plant"/>
+                <Property Name="PlantName" Type="Edm.String" MaxLength="30" sap:label="Operation Work Center Plant Name"/>
+                <Property Name="PurchaseRequisition" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Purchase Requisition"/>
+                <Property Name="PurchaseRequisitionItem" Type="Edm.String" MaxLength="5" sap:display-format="NonNegative" sap:label="Purchase Requisition Item"/>
+                <Property Name="OperationRequisitionerName" Type="Edm.String" MaxLength="12" sap:label="Requisitioner"/>
+                <Property Name="OperationGoodsRecipientName" Type="Edm.String" MaxLength="12" sap:label="Goods Recipient"/>
+                <Property Name="OpExternalProcessingPrice" Type="Edm.Decimal" Precision="11" Scale="2" sap:unit="OpExternalProcessingCurrency" sap:label="Price"/>
+                <Property Name="OpExternalProcessingCurrency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:semantics="currency-code"/>
+                <Property Name="MaintenanceOrderSubOperation" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Suboperation"/>
+                <Property Name="OpExternalProcessingPriceUnit" Type="Edm.Decimal" Precision="5" Scale="0" sap:label="Price Unit"/>
+                <Property Name="OperationTrackingNumber" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Tracking Number"/>
+                <Property Name="OperationPurchasingInfoRecord" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Purchasing Info Record"/>
+                <Property Name="OperationUnloadingPointName" Type="Edm.String" MaxLength="25" sap:label="Unloading Point"/>
+                <Property Name="OpPurchaseOutlineAgreement" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Purchase Outline Agreement"/>
+                <Property Name="OpPurchaseOutlineAgreementItem" Type="Edm.String" MaxLength="5" sap:display-format="NonNegative" sap:label="Purchase Outline Agreement Item"/>
+                <Property Name="OperationSupplier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:text="OperationSupplierName" sap:label="Supplier"/>
+                <Property Name="OperationSupplierName" Type="Edm.String" MaxLength="80" sap:label="Supplier Name"/>
+                <Property Name="OperationPersonResponsible" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Operation Person Responsible"/>
+                <Property Name="Assembly" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:text="AssemblyName" sap:label="Assembly"/>
+                <Property Name="MaintenanceOrderDesc" Type="Edm.String" MaxLength="40" sap:label="Order Description"/>
+                <Property Name="AssemblyName" Type="Edm.String" MaxLength="40" sap:label="Assembly Name"/>
+                <Property Name="OperationSystemCondition" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:text="OperationSystemConditionText" sap:label="System Condition"/>
+                <Property Name="OperationSystemConditionText" Type="Edm.String" MaxLength="40" sap:label="System Condition Text"/>
+                <Property Name="CostCtrActivityType" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Operation Activity Type"/>
+                <Property Name="ReqgCostCenterControllingArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Operation Controlling Area"/>
+                <Property Name="OperationCalculationControl" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:text="OperationCalcControlDesc" sap:label="Calculation key"/>
+                <Property Name="OperationCalcControlDesc" Type="Edm.String" MaxLength="60" sap:label="Calculation Key Description"/>
+                <Property Name="OperationWorkPercent" Type="Edm.Byte" sap:label="Work Percentage"/>
+                <Property Name="OperationPlannedWork" Type="Edm.Decimal" Precision="7" Scale="1" sap:unit="OperationPlannedWorkUnit" sap:label="Work"/>
+                <Property Name="OperationPlannedWorkUnit" Type="Edm.String" MaxLength="3" sap:label="Unit for work" sap:semantics="unit-of-measure"/>
+                <Property Name="MaintenanceProcessingPhase" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Order Status"/>
+                <Property Name="OperationDuration" Type="Edm.Decimal" Precision="5" Scale="1" sap:unit="OperationDurationUnit" sap:label="Normal Duration"/>
+                <Property Name="OperationDurationUnit" Type="Edm.String" MaxLength="3" sap:label="Normal Duration Unit" sap:semantics="unit-of-measure"/>
+                <Property Name="OrderHasLongText" Type="Edm.Boolean" sap:display-format="UpperCase" sap:field-control="OrderHasLongText_fc" sap:filter-restriction="single-value" sap:label="Has Long Text"/>
+                <Property Name="MaintPriorityType" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:text="MaintPriorityTypeDesc" sap:label="Priority type"/>
+                <Property Name="MaintPriorityTypeDesc" Type="Edm.String" MaxLength="20" sap:label="Priority Type Text"/>
+                <Property Name="MaintPriority" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:text="MaintPriorityDesc" sap:label="Priority"/>
+                <Property Name="MaintPriorityDesc" Type="Edm.String" MaxLength="20" sap:label="Priority Text"/>
+                <Property Name="MaintenanceNotification" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="MaintenanceNotificationText" sap:label="Notification"/>
+                <Property Name="MaintenanceNotificationText" Type="Edm.String" MaxLength="40" sap:label="Notification Text"/>
+                <Property Name="MaintenanceItem" Type="Edm.String" MaxLength="16" sap:display-format="UpperCase" sap:text="MaintenanceItemDescription" sap:label="Maintenance item"/>
+                <Property Name="MaintenanceOrderType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="MaintenanceOrderTypeName" sap:label="Order Type"/>
+                <Property Name="MaintenanceItemDescription" Type="Edm.String" MaxLength="40" sap:label="Maintenance Item Description"/>
+                <Property Name="SerialNumber" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Serial Number"/>
+                <Property Name="MaintenancePlanningPlant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="MaintenancePlanningPlantName" sap:label="Planning Plant"/>
+                <Property Name="MaintenancePlanningPlantName" Type="Edm.String" MaxLength="30" sap:label="Planning Plant Name"/>
+                <Property Name="MaintenancePlannerGroup" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:text="MaintenancePlannerGroupName" sap:label="Planner Group"/>
+                <Property Name="MaintenancePlannerGroupName" Type="Edm.String" MaxLength="18" sap:label="Planner Group Name"/>
+                <Property Name="MaintenanceRevision" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Revision"/>
+                <Property Name="MaintenancePlan" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="MaintenancePlanDesc" sap:label="Maintenance Plan"/>
+                <Property Name="MaintenancePlanDesc" Type="Edm.String" MaxLength="40" sap:label="Maintenance Plan Description"/>
+                <Property Name="MaintOrdBasicStartDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Basic Start Date"/>
+                <Property Name="MaintenanceOrderTypeName" Type="Edm.String" MaxLength="40" sap:label="Order Type Name"/>
+                <Property Name="MaintOrdBasicEndDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Basic finish date"/>
+                <Property Name="BusinessArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="BusinessAreaName" sap:label="Business Area"/>
+                <Property Name="BusinessAreaName" Type="Edm.String" MaxLength="30" sap:label="Business Area Description"/>
+                <Property Name="MaintOrdMainWorkCenter" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:text="MainWorkCenterText" sap:label="Maintenance Work Center"/>
+                <Property Name="MainWorkCenterText" Type="Edm.String" MaxLength="40" sap:label="Maintenance Work Center Text"/>
+                <Property Name="MaintOrdMainWorkCenterPlant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="MainWorkCenterPlantName" sap:label="Maintenance Work Center Plant"/>
+                <Property Name="MainWorkCenterPlantName" Type="Edm.String" MaxLength="30" sap:label="Maintenance Work Center Plant Name"/>
+                <Property Name="MaintOrdPersonResponsible" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="PersonResponsibleName" sap:label="Person Responsible"/>
+                <Property Name="PersonResponsibleName" Type="Edm.String" MaxLength="35" sap:label="Person Responsible Name"/>
+                <Property Name="MaintOrderReferenceDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Reference date" sap:quickinfo="Reference Date"/>
+                <Property Name="TechnicalObjectLabel" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="EAMS_TECH_OBJ_CONV"/>
+                <Property Name="MaintenanceOrderPlanningCode" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:text="MaintOrderPlanningCodeName" sap:label="Order Planning Indicator"/>
+                <Property Name="MaintOrderPlanningCodeName" Type="Edm.String" MaxLength="60" sap:label="Order Planning Indicator Text" sap:quickinfo="Maintenance Order Planning Indicator Text"/>
+                <Property Name="MaintenanceActivityType" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:text="MaintenanceActivityTypeName" sap:label="Order Activity Type"/>
+                <Property Name="MaintenanceActivityTypeName" Type="Edm.String" MaxLength="30" sap:label="Order Activity Type Name"/>
+                <Property Name="ResponsibleCostCenter" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Responsible Cost Center"/>
+                <Property Name="MaintenancePlant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="MaintenancePlantName" sap:label="Maintenance Plant"/>
+                <Property Name="MaintenancePlantName" Type="Edm.String" MaxLength="30" sap:label="Maintenance Plant Name"/>
+                <Property Name="AssetLocation" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:text="AssetLocationName" sap:label="Location"/>
+                <Property Name="AssetLocationName" Type="Edm.String" MaxLength="40" sap:label="Name of Location"/>
+                <Property Name="SortField" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Sort Field"/>
+                <Property Name="TechObjIsEquipOrFuncnlLoc" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:text="TechObjIsEquipOrFuncnlLocDesc" sap:label="Technical Object Type"/>
+                <Property Name="ABCIndicator" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:text="ABCIndicatorDesc" sap:label="ABC Indicator"/>
+                <Property Name="ABCIndicatorDesc" Type="Edm.String" MaxLength="20" sap:label="ABC Indicator Description"/>
+                <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Plant Section"/>
+                <Property Name="PlantSectionPersonRespName" Type="Edm.String" MaxLength="14" sap:text="PlantSectionPersonRespPhone" sap:label="Plant Section Responsible"/>
+                <Property Name="PlantSectionPersonRespPhone" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Phone Number of Plant Section Responsible"/>
+                <Property Name="CostCenter" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:text="CostCenterName" sap:label="Cost Center"/>
+                <Property Name="CostCenterName" Type="Edm.String" MaxLength="20" sap:label="Cost Center Name"/>
+                <Property Name="ControllingArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="ControllingAreaName" sap:label="Order Controlling Area"/>
+                <Property Name="ControllingAreaName" Type="Edm.String" MaxLength="25" sap:label="Order Controlling Area Name"/>
+                <Property Name="ScheduledBasicStartDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Scheduled Start Date"/>
+            </EntityType>
+            <EntityType Name="ZC_PMWorkCenterVHType" sap:label="Plant Maintenance Work Centers" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkCenterInternalID"/>
+                    <PropertyRef Name="WorkCenterTypeCode"/>
+                    <PropertyRef Name="WorkCenter"/>
+                </Key>
+                <Property Name="WorkCenterInternalID" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="NonNegative" sap:text="WorkCenter" sap:label="Object ID"/>
+                <Property Name="WorkCenterTypeCode" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:label="Object Type"/>
+                <Property Name="WorkCenter" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="UpperCase" sap:text="WorkCenter_Text" sap:label="Work Center"/>
+                <Property Name="WorkCenter_Text" Type="Edm.String" MaxLength="40" sap:label="Work Center Text" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="PlantName" Type="Edm.String" MaxLength="30" sap:label="Plant Name"/>
+                <Property Name="WorkCenterCategoryCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Work Center Category"/>
+            </EntityType>
+            <ComplexType Name="DummyFunctionImportResult">
+                <Property Name="ok" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <EntityContainer Name="ZEAM_OBJPG_MAINTORDANDOPER_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZC_ObjPgMaintOrderAndOperation" EntityType="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType" sap:creatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="ZC_PMWorkCenterVH" EntityType="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_PMWorkCenterVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <FunctionImport Name="CreateTimeConfirmation" ReturnType="ZEAM_OBJPG_MAINTORDANDOPER_SRV.DummyFunctionImportResult" m:HttpMethod="POST">
+                    <Parameter Name="Actualworkquantity" Type="Edm.Decimal" Mode="In" Precision="1" Scale="1"/>
+                    <Parameter Name="Actualworkquantityunit" Type="Edm.String" Mode="In" MaxLength="3"/>
+                    <Parameter Name="Isfinalconfirmation" Type="Edm.Boolean" Mode="In"/>
+                    <Parameter Name="MaintenanceOrder" Type="Edm.String" Mode="In" MaxLength="12"/>
+                    <Parameter Name="MaintenanceOrderOperation" Type="Edm.String" Mode="In" MaxLength="4"/>
+                    <Parameter Name="Personnelnumber" Type="Edm.String" Mode="In" MaxLength="8"/>
+                    <Parameter Name="Postingdate" Type="Edm.DateTime" Mode="In" Precision="0"/>
+                </FunctionImport>
+                <FunctionImport Name="ChangeAssgignment" ReturnType="ZEAM_OBJPG_MAINTORDANDOPER_SRV.DummyFunctionImportResult" m:HttpMethod="POST">
+                    <Parameter Name="MaintenanceOrder" Type="Edm.String" Mode="In" MaxLength="12"/>
+                    <Parameter Name="MainWorkCenter" Type="Edm.String" Mode="In" MaxLength="8"/>
+                    <Parameter Name="MainWorkCenterPlant" Type="Edm.String" Mode="In" MaxLength="4"/>
+                    <Parameter Name="MaintenanceOrderOperation" Type="Edm.String" Mode="In" MaxLength="4"/>
+                    <Parameter Name="MaintenanceOrderSubOperation" Type="Edm.String" Mode="In" MaxLength="4"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link rel="self" href="http://smiwddwd3400:44306/sap/opu/odata/sap/ZEAM_OBJPG_MAINTORDANDOPER_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://smiwddwd3400:44306/sap/opu/odata/sap/ZEAM_OBJPG_MAINTORDANDOPER_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

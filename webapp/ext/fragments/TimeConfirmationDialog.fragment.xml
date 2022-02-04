@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartform="sap.ui.comp.smartform"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:layout="sap.ui.layout" 	xmlns:f="sap.ui.layout.form">
+	<Dialog title="{i18n>xbut.TimeConfirmation}" contentWidth="40rem" id="pmCreateOrderComponent" stretch="{device>/system/phone}" afterOpen="afterDialogOpen"
+    afterClose="afterDialogClosed">
+		<content>            
+          
+              <smartform:SmartForm flexEnabled="false" editTogglable="false" editable="true" id="TimeConfirmationSmartForm">
+				<smartform:layout>
+					<smartform:Layout columnsL="1" columnsM="1" emptySpanL="1" emptySpanM="0" labelSpanL="0" labelSpanM="0"/>
+				</smartform:layout>
+				<smartform:groups>
+					<smartform:Group>
+						 <smartform:GroupElement>
+							<smartfield:SmartField id="ActualworkquantityField"  value="{ConfirmationTotalQuantity}" mandatory="true" />
+						</smartform:GroupElement> 
+                        <!-- <smartform:GroupElement>
+							<smartfield:SmartField id="ActualworkquantityunitField"  value="{OperationPlannedWorkUnit}" mandatory="false" />
+						</smartform:GroupElement> -->
+                         <smartform:GroupElement>
+							<smartfield:SmartField id="IsfinalconfirmationField"  value="{IsFinallyConfirmed}" mandatory="false" />
+						</smartform:GroupElement>
+                        <smartform:GroupElement>
+							 <Input width="100%" id="PersonalnummerField" type="Number" maxLength="8" value="{viewModel>/PersonnelNumber}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest=".onValueHelpPersonnelnumber"/>
+						</smartform:GroupElement>
+                        <smartform:GroupElement>
+                        <DatePicker id="PostingdateField" displayFormat="dd.MM.yyyy" class="sapUiSmallMarginBottom" showFooter="true"/>
+						</smartform:GroupElement>                        
+					</smartform:Group>
+				</smartform:groups>
+			</smartform:SmartForm>   
+		</content>
+        <beginButton>
+            <Button id="submitButton" press="createTimeConfirmation" type="Emphasized" text="{@i18n>xbut.CreateTimeConfirmation}"/>
+        </beginButton>
+        <endButton>
+            <Button id="cancelButton" press="cancelTimeConfirmation" text="{@i18n>xbut.cancel}"/>
+        </endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,18 @@
+{
+    "deploy": {
+        "sourceFolder": "./dist",
+        "targetSystem": "http://smiwddwd3400:44306",
+        "destinationName": "DNW_WD",
+        "client": "300",
+        "username": "EXTDEMARKOR",
+        "password": "",
+        "appName": "ZEAM_ORDOPMONS1",
+        "description": "Fiori Time Confirmations",
+        "abapPackage": "ZPPM_UI5",
+        "abapTransport": "DNWK900059"
+
+    },
+    "cli": {
+        "interactiveFallBack": true
+    }
+}

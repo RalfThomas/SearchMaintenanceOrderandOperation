@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='RFC_ECC_PD2')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='RFC_ECC_PD2')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='RFC_ECC_PD2')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zeam_objpg_maintordandoper_srv/$metadata">
+        <edmx:Include Namespace="ZEAM_OBJPG_MAINTORDANDOPER_SRV" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zeam_objpg_maintordando_anno_mdl.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/IsOverdue">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintPriorityDesc">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintOrderOperationLongText">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintOrderOperationInternalID">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintOrderOperationCounter">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintOrderRoutingNumber">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/OperationWorkCenterInternalID">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/AuthorizationGroup">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintenanceOrderInternalID">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/WorkCenterInternalID">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/WorkCenterTypeCode">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintObjectLocAcctAssgmtNmbr">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/Plant">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/TechnicalObject">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/FunctionalLocationLabelName">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintOrderRespPartnerFunction">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintOrderConfirmation">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintOperationTechnicalObject">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/OrderHasLongText_fc">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintenanceOrder">
+                <Annotation Term="Common.SemanticObject" String="MaintenanceOrder"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/TechnicalObjectLabel">
+                <Annotation Term="Common.SemanticObject" String="MaintenanceObject"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/OperationTechnicalObjectLabel">
+                <Annotation Term="Common.SemanticObject" String="MaintenanceObject"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/OperationMaintenanceNotif">
+                <Annotation Term="Common.SemanticObject" String="MaintenanceNotification"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/PurchaseRequisition">
+                <Annotation Term="Common.SemanticObject" String="PurchaseRequisition"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/PurchaseRequisitionItem">
+                <Annotation Term="Common.SemanticObject" String="PurchaseRequisitionItem"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType/MaintenanceNotification">
+                <Annotation Term="Common.SemanticObject" String="MaintenanceNotification"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_ObjPgMaintOrderAndOperationType">
+                <Annotation Term="UI.FieldGroup" Qualifier="Operation">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationDurationUnit"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationDuration"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationPlannedWorkUnit"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationPlannedWork"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationWorkPercent"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationCalcControlDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationCalculationControl"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ReqgCostCenterControllingArea"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CostCtrActivityType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationSystemConditionText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationSystemCondition"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AssemblyName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Assembly"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationPersonResponsible"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationSupplierName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationSupplier"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OpPurchaseOutlineAgreementItem"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OpPurchaseOutlineAgreement"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationUnloadingPointName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationPurchasingInfoRecord"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationTrackingNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OpExternalProcessingPriceUnit"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OpExternalProcessingCurrency"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OpExternalProcessingPrice"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationGoodsRecipientName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationRequisitionerName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PurchaseRequisitionItem"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PurchaseRequisition"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PlantName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PlannedPlant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationPurgInfoRecdSearchTxt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationHasLongText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="WorkCenterText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="WorkCenter"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationControlKey"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationMaintNotificationText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationTechObjIsEquipDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationTechObjIsEquip"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationTechnicalObjectLabel"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OperationDescription"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceOrderSubOperation"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceOrderOperation"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Operation"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Order">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="IsFinallyConfirmed"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangedByUserName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangedByUser"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangeDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedByUserDescription"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedByUser"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreationDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ScheduledBasicEndTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ScheduledBasicEndDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ScheduledBasicStartTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ScheduledBasicStartDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ControllingAreaName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ControllingArea"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CostCenterName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CostCenter"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PlantSectionPersonRespPhone"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PlantSectionPersonRespName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PlantSection"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ABCIndicatorDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ABCIndicator"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SortField"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AssetLocationName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AssetLocation"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlantName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ResponsibleCostCenter"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceActivityTypeName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceActivityType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintOrderPlanningCodeName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceOrderPlanningCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintOrderReferenceDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PersonResponsibleName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintOrdPersonResponsible"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MainWorkCenterPlantName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintOrdMainWorkCenterPlant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MainWorkCenterText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintOrdMainWorkCenter"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BusinessAreaName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BusinessArea"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintOrdBasicEndDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintOrdBasicStartDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlanDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlan"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceRevision"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlannerGroupName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlannerGroup"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlanningPlantName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenancePlanningPlant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SerialNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceItemDescription"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceItem"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceNotificationText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceNotification"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintPriorityDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintPriority"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintPriorityTypeDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintPriorityType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OrderHasLongText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="TechObjIsEquipOrFuncnlLocDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="TechObjIsEquipOrFuncnlLoc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="TechnicalObjectLabel"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceOrderTypeName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceOrderType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceProcessingPhase"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceOrderDesc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaintenanceOrder"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Order"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Maintenance Order and Operation"/>
+                        <PropertyValue Property="TypeNamePlural" String="Maintenance Orders and Operations"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="MaintenanceOrderOperation"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="Property 'OrderAndOperationText' of annotation 'UI.HEADERINFO.DESCRIPTION' in proj./view 'ZC_ObjPgMaintOrderAndOperation' not found"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaintenanceOrder"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaintenanceOrderType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaintenanceOrderOperation"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaintenanceOrderSubOperation"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TechnicalObjectLabel"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TechObjIsEquipOrFuncnlLoc"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OperationTechnicalObjectLabel"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OperationTechObjIsEquip"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaintOrdMainWorkCenter"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Label" String="Contact Information (Operation Person Responsible)"/>
+                            <PropertyValue Property="Value" String="Navigation property '_ContactCardEmployee' of annotation 'UI.LINEITEM' in proj./view 'ZC_ObjPgMaintOrderAndOperation' not found"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="WorkCenter"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OperationPlannedWork"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaintPriority"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>MaintenanceOrder</PropertyPath>
+                        <PropertyPath>MaintenanceOrderType</PropertyPath>
+                        <PropertyPath>MaintenanceProcessingPhase</PropertyPath>
+                        <PropertyPath>TechnicalObjectLabel</PropertyPath>
+                        <PropertyPath>MaintenanceOrderOperation</PropertyPath>
+                        <PropertyPath>OperationDescription</PropertyPath>
+                        <PropertyPath>MaintOrdMainWorkCenter</PropertyPath>
+                        <PropertyPath>MaintOrdMainWorkCenterPlant</PropertyPath>
+                        <PropertyPath>WorkCenter</PropertyPath>
+                        <PropertyPath>PlannedPlant</PropertyPath>
+                        <PropertyPath>MaintPriority</PropertyPath>
+                        <PropertyPath>ScheduledBasicStartDate</PropertyPath>
+                        <PropertyPath>ScheduledBasicEndDate</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_PMWorkCenterVHType/WorkCenterInternalID">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEAM_OBJPG_MAINTORDANDOPER_SRV.ZC_PMWorkCenterVHType/WorkCenterTypeCode">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

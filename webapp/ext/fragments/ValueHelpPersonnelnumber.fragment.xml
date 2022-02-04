@@ -1,0 +1,65 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table">
+	<Dialog title="{/#ZI_PMContactCardEmployeeType/PersonnelNumber/@sap:label}" class="sapUiResponsiveMargin" draggable="true" afterClose="onExitValueHelpPersonnelnumber" resizable="true"
+		>
+		<buttons>
+			<Button text="{i18n>xbut.cancel}" type="Emphasized" press="onCancelValueHelpPersonnelnumber"/>
+		</buttons>
+		<content>
+			<VBox class="sapUiResponsiveMargin" fitContainer="true">
+				<items>
+					<smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="ZI_PMContactCardEmployee" showClearButton="true" showClearOnFB="true" showGoOnFB="true"
+						deltaVariantMode="false" enableBasicSearch="false">
+						<smartFilterBar:layoutData>
+							<FlexItemData shrinkFactor="0"/>
+						</smartFilterBar:layoutData>
+						<smartFilterBar:controlConfiguration>
+                            <smartFilterBar:ControlConfiguration key="PersonnelNumber" filterType="single" visibleInAdvancedArea="true"/>
+                            <smartFilterBar:ControlConfiguration key="FirstName" filterType="single" visibleInAdvancedArea="true"/>
+                            <smartFilterBar:ControlConfiguration key="FamilyName" filterType="single" visibleInAdvancedArea="false"/>
+						</smartFilterBar:controlConfiguration>
+					</smartFilterBar:SmartFilterBar>
+					<smartTable:SmartTable id="smartTable" enableAutoBinding="true"  beforeRebindTable="onBeforeRebindSmartTable" entitySet="ZI_PMContactCardEmployee" smartFilterId="smartFilterBar" tableType="ResponsiveTable"
+						header="{/#ZI_PMContactCardEmployeeType/PersonnelNumber/@sap:label}" showRowCount="true" useExportToExcel="false" showTablePersonalisation="false">
+						<smartTable:layoutData>
+							<FlexItemData growFactor="1" baseSize="0%"/>
+						</smartTable:layoutData>
+						<table:Table id="tableSmartTableID" alternateRowColors="true" enableSelectAll="false" selectionMode="Single" selectionBehavior="Row"
+							rowSelectionChange="onChoosePersonnelnumber" visibleRowCountMode="Interactive">
+							<!--PersonnelNumber-->
+							<table:Column width="11em" id="PersonnelNumberColumn" sortProperty="PersonnelNumber" filterProperty="PersonnelNumber">
+								<table:customData>
+									<core:CustomData key="p13nData" value='\{"columnKey": "PersonnelNumber", "leadingProperty": "PersonnelNumber"}'/>
+								</table:customData>
+								<Label id="PersonnelNumberLabel" text="{/#ZI_PMContactCardEmployeeType/PersonnelNumber/@sap:label}"/>
+								<table:template>
+									<Text id="PersonnelNumberCell" text="{PersonnelNumber}"/>
+								</table:template>
+							</table:Column>
+							<!--FirstName-->
+							<table:Column id="FirstNameColumn" sortProperty="FirstName" filterProperty="FirstName">
+								<table:customData>
+									<core:CustomData key="p13nData" value='\{"columnKey": "FirstName", "leadingProperty": "FirstName"}'/>
+								</table:customData>
+								<Label id="FirstNameLabel" text="{/#ZI_PMContactCardEmployeeType/FirstName/@sap:label}"/>
+								<table:template>
+									<Text id="FirstNameCell" text="{FirstName}"/>
+								</table:template>
+							</table:Column>
+                            <!--FamilyName-->
+							<table:Column id="FamilyNameColumn" sortProperty="FamilyName" filterProperty="FamilyName">
+								<table:customData>
+									<core:CustomData key="p13nData" value='\{"columnKey": "FamilyName", "leadingProperty": "FamilyName"}'/>
+								</table:customData>
+								<Label id="FamilyNameLabel" text="{/#ZI_PMContactCardEmployeeType/FamilyName/@sap:label}"/>
+								<table:template>
+									<Text id="FamilyNameCell" text="{FamilyName}"/>
+								</table:template>
+							</table:Column>
+						</table:Table>
+					</smartTable:SmartTable>
+				</items>
+			</VBox>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>
